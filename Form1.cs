@@ -1,5 +1,4 @@
-﻿using Krypton.Toolkit;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace AutoScaleTest
@@ -28,10 +27,14 @@ namespace AutoScaleTest
 
         #endregion Public Constructors
 
+        #region Private Methods
+
         private void button1_Click(object sender, System.EventArgs e)
         {
             var childForm = new ChildForm();
             childForm.ShowDialog(this);
         }
+
+        #endregion Private Methods
     }
 }
