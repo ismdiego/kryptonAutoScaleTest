@@ -104,8 +104,8 @@ namespace AutoScaleTest
             else
             {
                 var font = control.Font;
-                var scaleFactor = font.SizeInPoints / BaseFontSize;
-                control.Font = new Font(font.FontFamily, font.Size * scaleFactor, font.Style, font.Unit, font.GdiCharSet, font.GdiVerticalFont);
+                var newSize = font.SizeInPoints * ScaleFactorF.Height;
+                control.Font = new Font(font.FontFamily, newSize, font.Style, font.Unit, font.GdiCharSet, font.GdiVerticalFont);
             }
 
             foreach (Control child in control.Controls)
